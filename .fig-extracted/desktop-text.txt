@@ -1,0 +1,100 @@
+## Formulário (4118:414)
+- [0,0] Mensagem
+- [0,0] Cidade
+- [0,0] Estado
+- [0,0] Empresa •
+- [0,0] Telefone •
+- [0,0] E-mail •
+- [0,0] Nome •
+- [0,329] Vamos conversar: entre em contato conosco e descubra como podemos impulsionar o sucesso da sua empresa!
+- [48,20] Escreva detalhes da sua mensagem
+- [48,20] Guarulhos
+- [48,20] São Paulo
+- [48,20] Logicoop Logística e Transporte de Cargas
+- [48,20] (11) 3030.3030
+- [48,20] rubem.coelho@logicoop.com
+- [48,20] Rubem Motta Coelho
+
+## Rodapé (4118:448)
+- [0,0] Como podemos ajudar
+- [0,200] Todos os direitos reservados
+- [158,230] Rua Lauro Luchesi, 381, Jardim Leonor Mendes de Barros, São Paulo - SP, CEP 02348-090
+- [158,1494] Desenvolvido por Abrasivo Digital
+
+## Banner + Vídeo (4118:27)
+- [0,0] Adeus, canhotos problemáticos: elimine perdas e conquiste eficiência com a Easy Doc
+- [116,0] Saiba como a digitalização de comprovantes de entrega pode transformar a operação da sua transportadora, acelerando pagamentos, reduzindo custos e elevando a satisfação dos clientes.
+
+## Problema (4118:75)
+- [0,0] Dois problemas, sérias consequências
+- [14,16] !!
+- [14,21] !
+- [40,110] Dificuldade na obtenção de comprovantes de entrega digitais de qualidade junto aos seus motoristas.
+- [40,110] Integração adequada a um sistema, para poder disponibilizar informações em tempo real a seus clientes.
+- [68,0] Atualmente, muitas transportadoras possuem 2 desaﬁos na sua operação junto a seus clientes:
+
+## Dificuldades (4118:92)
+- [0,0] Bloqueio e recusa de pagamentos
+- [0,0] Perda de tempo e recursos
+- [0,0] Impacto negativo na imagem
+- [0,60] Essas dificuldades resultam em sérios problemas operacionais, como:
+- [28,0] Bloqueio e recusa de pagamentos, impactando diretamente o ﬂuxo de caixa da empresa.
+- [28,0] Perda de tempo e recursos corrigindo problemas com as imagens, entrando em contato com motoristas e lidando com clientes insatisfeitos.
+- [28,0] Impacto negativo na imagem da empresa, pela falta de agilidade na comprovação de entregas - inclusive colocando futuras negociações em risco.
+
+## CTA (4118:116)
+- [14,21] !
+- [110,110] Um único desaﬁo, aparentemente simples – mas complexo tecnicamente de resolver
+
+## Raiz do Problema (4118:145)
+- [0,0] Raiz do problema: falta de tecnologia adequada e processos ágeis
+- [40,110] Dependência de fotos de celular sem um sistema que faça a validação da foto.
+- [40,110] Falta de integração entre a captura de comprovantes e o sistema de gestão.
+- [40,110] Dificuldade em atender às exigências dos clientes por informações em tempo.
+- [90,0] É crescente a demanda do mercado por processos digitalizados, ágeis e sem papel. E muitas transportadoras ainda utilizam sistemas que deixam a desejar, com limitações como:
+
+## Tecnologia (4118:169)
+- [0,0] Com a Easy Doc, sua Transportadora pode experimentar uma transformação significativa nas suas operações, com a Digitalização dos Comprovantes de entrega de forma descentralizada. Essa solução conta com o fornecimento de:
+- [40,110] Dispositivos customizados de hardware, para digitalização rápida de canhoto de Nota Fiscal, Dacte e outros tipos de comprovantes, em todas as suas filiais.
+- [40,110] Um software inteligente para realizar a leitura desses documentos de forma automatizada, rápida e assertiva.
+- [40,110] Esses equipamentos transformam o documento em um arquivo digital, com ótima qualidade de imagem. E por serem integrados com o TMS, poderão disponibilizar a informação para seus clientes, no menor tempo possível.
+
+## Benefícios (4118:192)
+- [0,0] Leve sua Transportadora a um novo patamar com a Easy Doc
+- [55,0] Os benefícios das soluções Easy Doc resultam em melhorias concretas para sua Transportadora, como:
+- [65,70] Redução de custos e aumento da produtividade da equipe
+- [65,80] Recebimento das faturas sem atrasos ou recusas
+- [65,80] Fortalecimento da imagem da empresa
+
+## Processo (4118:218)
+- [0,0] Como é o nosso processo?
+- [0,0] Passo 1 - Consultoria
+- [0,0] Passo 2 - Elaboração da Solução
+- [0,0] Passo 3 - Implementação e treinamento
+- [0,0] Passo 4 - Suporte contínuo
+- [28,0] Realizamos uma consultoria, que conta com um mapeamento detalhado dos processos e identificação dos gargalos.
+- [28,0] Elaboramos uma solução personalizada, conforme as características da sua transportadora, garantindo a máxima eficiência.
+- [28,0] Realizamos a implementação de forma rápida, incluindo a instalação dos equipamentos, a conﬁguração do software e o treinamento da equipe.
+- [28,0] Oferecemos Suporte Técnico constante, para garantir o bom funcionamento da solução e a resolução de qualquer problema que possa surgir.
+- [55,0] A Easy Doc conta com um processo de excelência para fornecer a você uma solução personalizada e específica para as suas necessidades.
+
+## Case (4118:253)
+- [0,0] Case de sucesso: Bora Transportes e os desaﬁos do crescimento acelerado
+- [0,30] 18
+- [0,30] 21
+- [0,30] 300
+- [45,30] filiais
+- [45,30] anos
+- [45,30] veículos
+- [48,110] Assista o case da Bora Transportes completo!
+- [90,0] A Bora Transportes é uma transportadora que realiza a transferência e distribuição de alimentos nas regiões Norte, Nordeste, MG e ES. Com 21 anos, enfrentou, juntamente com o crescimento e o sucesso, os mesmos desaﬁos citados acima. Então contou com nossas soluções para alcançar um novo patamar de eficiência e organização.
+
+## Depoimentos (4118:282)
+- [0,0] “Os serviços da Easy Doc transformou a nossa gestão de comprovantes de entrega! Antes, perdíamos tempo e dinheiro com documentos físicos. Agora, tudo é digital, acessível em tempo real e com total segurança. A rastreabilidade melhorou muito, reduzindo erros e aumentando a eficiência da equipe!”
+- [139,0] Carlos Menezes, Gerente de Logística da Translog Transportes • São Paulo - SP
+
+## Marcas (4118:308)
+
+## CTA (4118:389)
+- [133,60] A Bora Transportes superou desaﬁos e alcançou resultados expressivos com a Easy Doc. E você, está pronto para a sua transformação digital?
+

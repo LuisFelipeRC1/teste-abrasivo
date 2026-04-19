@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viewport Test</title>
+  <style>
+    body {
+      font-family: monospace;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .info {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    .value {
+      background: #f0f0f0;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+      border-left: 4px solid #d10010;
+    }
+    @media (max-width: 920px) {
+      body {
+        background: #fff3f3;
+      }
+      .mobile-indicator {
+        color: green;
+        font-weight: bold;
+      }
+    }
+    @media (max-width: 1180px) {
+      body {
+        background: #f3f3ff;
+      }
+      .tablet-indicator {
+        color: blue;
+        font-weight: bold;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="info">
+    <h2>Viewport Information</h2>
+    <div class="value">
+      <strong>window.innerWidth:</strong> <span id="innerWidth">-</span> px
+    </div>
+    <div class="value">
+      <strong>window.innerHeight:</strong> <span id="innerHeight">-</span> px
+    </div>
+    <div class="value">
+      <strong>screen.width:</strong> <span id="screenWidth">-</span> px
+    </div>
+    <div class="value">
+      <strong>screen.height:</strong> <span id="screenHeight">-</span> px
+    </div>
+  </div>
+
+  <div class="info">
+    <h2>Media Query Status</h2>
+    <div class="value">
+      Desktop (min-width: 921px): <span id="desktop">No</span>
+    </div>
+    <div class="value tablet-indicator">
+      Tablet (max-width: 1180px): <span id="tablet">No</span>
+    </div>
+    <div class="value mobile-indicator">
+      Mobile (max-width: 920px): <span id="mobile">No</span>
+    </div>
+  </div>
+
+  <script>
+    function updateInfo() {
+      document.getElementById('innerWidth').textContent = window.innerWidth;
+      document.getElementById('innerHeight').textContent = window.innerHeight;
+      document.getElementById('screenWidth').textContent = screen.width;
+      document.getElementById('screenHeight').textContent = screen.height;
+
+      document.getElementById('desktop').textContent = window.matchMedia('(min-width: 921px)').matches ? 'YES' : 'No';
+      document.getElementById('tablet').textContent = window.matchMedia('(max-width: 1180px)').matches ? 'YES' : 'No';
+      document.getElementById('mobile').textContent = window.matchMedia('(max-width: 920px)').matches ? 'YES' : 'No';
+    }
+
+    updateInfo();
+    window.addEventListener('resize', updateInfo);
+  </script>
+</body>
+</html>

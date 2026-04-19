@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easy Doc | Landing Page</title>
+    <meta
+      name="description"
+      content="Digitaliza&ccedil;&atilde;o de comprovantes de entrega para transportadoras com mais agilidade, rastreabilidade e efici&ecirc;ncia."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Readex+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <svg class="icon-defs" aria-hidden="true">
+      <symbol id="icon-alert" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.9" />
+        <path d="M12 6.7v6.8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.9" />
+        <circle cx="12" cy="16.9" r="1.1" fill="currentColor" />
+      </symbol>
+      <symbol id="icon-coins" viewBox="0 0 24 24">
+        <ellipse cx="12" cy="6.5" rx="5.8" ry="2.7" fill="none" stroke="currentColor" stroke-width="1.6" />
+        <path d="M6.2 6.5v4.2c0 1.5 2.6 2.8 5.8 2.8s5.8-1.3 5.8-2.8V6.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+        <path d="M7.3 11.8v3.4c0 1.4 2.1 2.6 4.7 2.6s4.7-1.2 4.7-2.6v-3.4" fill="none" stroke="currentColor" stroke-width="1.6" />
+      </symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8.4" fill="none" stroke="currentColor" stroke-width="1.8" />
+        <path d="M12 7.6v4.7l3.2 1.8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" />
+      </symbol>
+      <symbol id="icon-thumb-down" viewBox="0 0 24 24">
+        <path
+          d="M9 14.6 10 19a1.7 1.7 0 0 0 3.2.2l1.3-4.6c.2-.6.7-1.1 1.4-1.1h2.2c1 0 1.9-.8 2.1-1.8l.9-5.2c.2-1.2-.7-2.2-1.8-2.2H7.3c-.8 0-1.6.5-1.9 1.2L3.7 9.8c-.5 1.2.4 2.6 1.8 2.6H9Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-linejoin="round"
+          stroke-width="1.6"
+        />
+      </symbol>
+      <symbol id="icon-phone" viewBox="0 0 24 24">
+        <path
+          d="M15.5 20.1c-6.6 0-11.6-5-11.6-11.6 0-.8.6-1.4 1.4-1.4h2.8c.7 0 1.2.5 1.4 1.1l.7 2.9c.1.5 0 1-.4 1.3l-1.9 1.6c.9 1.7 2.4 3.2 4.1 4.1l1.6-1.9c.4-.4.9-.6 1.4-.4l2.8.7c.6.2 1.1.8 1.1 1.4v2.8c0 .8-.6 1.4-1.4 1.4h-2Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-linejoin="round"
+          stroke-width="1.7"
+        />
+      </symbol>
+      <symbol id="icon-refresh" viewBox="0 0 24 24">
+        <path d="M20 6.5v5h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" />
+        <path d="M4 17.5v-5h5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" />
+        <path d="M6.9 9.2A7 7 0 0 1 18 7.3M17.1 14.8A7 7 0 0 1 6 16.7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" />
+      </symbol>
+      <symbol id="icon-hourglass" viewBox="0 0 24 24">
+        <path d="M7 4h10M7 20h10M8.4 4c0 2.4.7 3.8 3.6 6-2.9 2.2-3.6 3.6-3.6 6M15.6 4c0 2.4-.7 3.8-3.6 6 2.9 2.2 3.6 3.6 3.6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" />
+      </symbol>
+      <symbol id="icon-briefcase" viewBox="0 0 24 24">
+        <path d="M8 7V5.6A1.6 1.6 0 0 1 9.6 4h4.8A1.6 1.6 0 0 1 16 5.6V7" fill="none" stroke="currentColor" stroke-width="1.8" />
+        <rect x="4" y="7" width="16" height="11" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.8" />
+        <path d="M4 11.4h16" fill="none" stroke="currentColor" stroke-width="1.8" />
+      </symbol>
+      <symbol id="icon-monitor" viewBox="0 0 24 24">
+        <rect x="4" y="5" width="16" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" />
+        <path d="M9.5 20h5M12 16v4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" />
+      </symbol>
+      <symbol id="icon-bulb" viewBox="0 0 24 24">
+        <path d="M9.5 17.4h5M10.1 20h3.8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" />
+        <path d="M8.3 15.9a6 6 0 1 1 7.4 0c-.7.5-1.2 1.4-1.2 2.3h-5c0-.9-.5-1.8-1.2-2.3Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8" />
+      </symbol>
+      <symbol id="icon-file" viewBox="0 0 24 24">
+        <path d="M8 4h6l4 4v12H8a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7" />
+        <path d="M14 4v4h4" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7" />
+      </symbol>
+      <symbol id="icon-chart" viewBox="0 0 24 24">
+        <path d="M5 19V9M12 19V5M19 19v-8M4 19h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" />
+      </symbol>
+      <symbol id="icon-thumb-up" viewBox="0 0 24 24">
+        <path
+          d="m15 9.4-1-4.4A1.7 1.7 0 0 0 10.8 5L9.5 9.6c-.2.6-.7 1.1-1.4 1.1H5.9c-1 0-1.9.8-2.1 1.8l-.9 5.2c-.2 1.2.7 2.2 1.8 2.2h12c.8 0 1.6-.5 1.9-1.2l1.7-4.2c.5-1.2-.4-2.6-1.8-2.6H15Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-linejoin="round"
+          stroke-width="1.6"
+        />
+      </symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24">
+        <path d="m12 4.7 2.1 4.3 4.7.7-3.4 3.3.8 4.7L12 15.5l-4.2 2.2.8-4.7-3.4-3.3 4.7-.7L12 4.7Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7" />
+      </symbol>
+      <symbol id="icon-truck" viewBox="0 0 24 24">
+        <path d="M4 7h10v8H4zM14 10h3.2l2.8 2.8V15h-6" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7" />
+        <circle cx="8" cy="17.2" r="1.7" fill="none" stroke="currentColor" stroke-width="1.7" />
+        <circle cx="17" cy="17.2" r="1.7" fill="none" stroke="currentColor" stroke-width="1.7" />
+      </symbol>
+      <symbol id="icon-graduation" viewBox="0 0 24 24">
+        <path d="m12 5 8 4-8 4-8-4 8-4Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7" />
+        <path d="M8 11.2v3.2c0 1.4 1.8 2.6 4 2.6s4-1.2 4-2.6v-3.2M20 9v4.8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" />
+      </symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="5.8" fill="none" stroke="currentColor" stroke-width="1.8" />
+        <path d="m19 19-3.1-3.1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" />
+      </symbol>
+      <symbol id="icon-play" viewBox="0 0 24 24">
+        <path d="M9 7.2v9.6L17 12 9 7.2Z" fill="currentColor" />
+      </symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path d="M6 12h12M13 7l5 5-5 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" />
+      </symbol>
+      <symbol id="icon-user" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="3.1" fill="none" stroke="currentColor" stroke-width="1.7" />
+        <path d="M6.8 18.4c1.1-2.7 3.2-4.1 5.2-4.1s4.1 1.4 5.2 4.1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.7" />
+      </symbol>
+      <symbol id="icon-support" viewBox="0 0 24 24">
+        <path d="M20 12.1a7.4 7.4 0 0 1-.5 2l-1.7.4-.2.4.9 1.6a8.3 8.3 0 0 1-1.4 1.5l-1.7-.9-.4.2-.4 1.8a8.3 8.3 0 0 1-2 .5l-.7-1.7h-.4l-.7 1.7a8.1 8.1 0 0 1-2-.5l-.4-1.8-.4-.2-1.6.9a8.3 8.3 0 0 1-1.5-1.5l.9-1.6-.2-.4-1.8-.4a8.7 8.7 0 0 1 0-4.1l1.8-.4.2-.4-.9-1.6A8.3 8.3 0 0 1 5.4 6l1.6.9.4-.2.4-1.8a8.1 8.1 0 0 1 2-.5l.7 1.7h.4l.7-1.7a8.3 8.3 0 0 1 2 .5l.4 1.8.4.2 1.7-.9A8.3 8.3 0 0 1 18.5 7l-.9 1.6.2.4 1.7.4a7.5 7.5 0 0 1 .5 2.7Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.55" />
+        <circle cx="12" cy="12" r="2.45" fill="none" stroke="currentColor" stroke-width="1.55" />
+      </symbol>
+    </svg>
+
+    <header class="site-header" id="topo">
+      <div class="shell header-shell">
+        <a class="brand" href="#inicio" aria-label="Easy Doc">
+          <img src="assets/logos/easydoc-wordmark.svg" alt="Easy Doc" />
+        </a>
+
+        <nav class="desktop-nav" aria-label="Navega&ccedil;&atilde;o principal">
+          <a href="#inicio">Home</a>
+          <a class="nav-link nav-link-caret" href="#tecnologia">Solu&ccedil;&otilde;es</a>
+          <a class="nav-link nav-link-caret" href="#beneficios">Produtos</a>
+          <a href="#case">Cases</a>
+          <a href="#depoimentos">Blog</a>
+          <a href="#rodape">Institucional</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn btn-header" href="#contato">Solicitar demonstra&ccedil;&atilde;o</a>
+          <a class="header-link" href="#topo">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-user"></use></svg>
+            <span>Login</span>
+          </a>
+          <a class="header-link" href="#rodape">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-support"></use></svg>
+            <span>Suporte</span>
+          </a>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Abrir menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <nav aria-label="Navega&ccedil;&atilde;o mobile">
+          <a href="#inicio">Home</a>
+          <a class="nav-link nav-link-caret" href="#tecnologia">Solu&ccedil;&otilde;es</a>
+          <a class="nav-link nav-link-caret" href="#beneficios">Produtos</a>
+          <a href="#case">Cases</a>
+          <a href="#depoimentos">Blog</a>
+          <a href="#rodape">Institucional</a>
+          <a class="mobile-cta" href="#contato">Solicitar demonstra&ccedil;&atilde;o</a>
+          <a class="mobile-utility" href="#topo">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-user"></use></svg>
+            <span>Login</span>
+          </a>
+          <a class="mobile-utility" href="#rodape">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-support"></use></svg>
+            <span>Suporte</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section" id="inicio">
+        <div class="hero-bg"></div>
+        <div class="shell hero-shell">
+          <div class="hero-copy reveal">
+            <h1>
+              Adeus, canhotos problem&aacute;ticos: elimine perdas e conquiste
+              efici&ecirc;ncia com a Easy Doc
+            </h1>
+            <p>
+              Saiba como a digitaliza&ccedil;&atilde;o de comprovantes de entrega pode
+              <strong>
+                transformar a opera&ccedil;&atilde;o da sua transportadora, acelerando
+                pagamentos, reduzindo custos
+              </strong>
+              e elevando a satisfa&ccedil;&atilde;o dos clientes.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-light" href="#contato">
+                <span>Fale com um consultor</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+              </a>
+            </div>
+          </div>
+
+          <button
+            class="video-card video-card-hero reveal"
+            type="button"
+            data-video="https://www.youtube.com/embed/BOLSMaepKU4?autoplay=1"
+            aria-label="Assistir v&iacute;deo da se&ccedil;&atilde;o inicial"
+          >
+            <img src="assets/images/hero-video.png" alt="V&iacute;deo demonstrativo da Easy Doc" />
+            <span class="video-play">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-play"></use></svg>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section shell intro-problem" id="problemas">
+        <div class="section-heading centered reveal">
+          <h2>Dois problemas, s&eacute;rias consequ&ecirc;ncias</h2>
+          <p>
+            Atualmente, muitas transportadoras possuem 2 desafios na sua opera&ccedil;&atilde;o junto a
+            seus clientes:
+          </p>
+        </div>
+
+        <div class="problem-grid reveal-group">
+          <article class="soft-card issue-card reveal">
+            <div class="icon-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-alert"></use></svg>
+            </div>
+            <p>
+              <strong>Dificuldade na obten&ccedil;&atilde;o de comprovantes</strong> de
+              entrega digitais de qualidade junto aos seus motoristas.
+            </p>
+          </article>
+          <article class="soft-card issue-card reveal">
+            <div class="icon-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-file"></use></svg>
+            </div>
+            <p>
+              <strong>Integra&ccedil;&atilde;o adequada a um sistema</strong>, para poder
+              disponibilizar informa&ccedil;&otilde;es em tempo real a seus clientes.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section shell difficulties">
+        <div class="section-heading centered reveal">
+          <h2>Essas dificuldades resultam em s&eacute;rios problemas operacionais, como:</h2>
+        </div>
+
+        <div class="stack-list">
+          <article class="outline-card reveal">
+            <div class="icon-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-coins"></use></svg>
+            </div>
+            <div>
+              <h3>Bloqueio e recusa de pagamentos</h3>
+              <p>
+                Bloqueio e recusa de pagamentos, impactando diretamente o fluxo de caixa da
+                empresa.
+              </p>
+            </div>
+          </article>
+
+          <article class="outline-card reveal">
+            <div class="icon-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-clock"></use></svg>
+            </div>
+            <div>
+              <h3>Perda de tempo e recursos</h3>
+              <p>
+                Perda de tempo e recursos corrigindo problemas com as imagens, entrando em
+                contato com motoristas e lidando com clientes insatisfeitos.
+              </p>
+            </div>
+          </article>
+
+          <article class="outline-card reveal">
+            <div class="icon-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-thumb-down"></use></svg>
+            </div>
+            <div>
+              <h3>Impacto negativo na imagem</h3>
+              <p>
+                Impacto negativo na imagem da empresa, pela falta de agilidade na
+                comprova&ccedil;&atilde;o de entregas, inclusive colocando futuras negocia&ccedil;&otilde;es em risco.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section shell mini-cta reveal">
+        <div class="mini-cta-panel">
+          <div class="mini-cta-copy">
+            <div class="mini-cta-alert" aria-hidden="true">
+              <span>!</span>
+            </div>
+            <h2>
+              <span>Um &uacute;nico desafio, aparentemente simples</span>
+              <span>&ndash; mas complexo tecnicamente de resolver</span>
+            </h2>
+          </div>
+          <img class="mini-cta-robot" src="assets/images/robot.png" alt="Mascote da Easy Doc" />
+        </div>
+      </section>
+
+      <section class="section split-problem root-problem" id="tecnologia">
+        <div class="split-media root-problem-media reveal">
+          <img src="assets/images/root-problem.png" alt="Equipamentos de digitaliza&ccedil;&atilde;o Easy Doc" />
+        </div>
+        <div class="split-copy root-problem-copy reveal">
+          <div class="root-problem-inner">
+            <div class="section-heading root-problem-heading">
+              <h2>Raiz do problema: falta de tecnologia adequada e processos &aacute;geis</h2>
+              <p>
+                &Eacute; crescente a demanda do mercado por processos digitalizados, &aacute;geis e sem
+                papel. E muitas transportadoras ainda utilizam sistemas que deixam a desejar,
+                com limita&ccedil;&otilde;es como:
+              </p>
+            </div>
+
+            <div class="soft-list root-problem-list">
+              <article class="soft-card root-problem-card">
+                <div class="icon-badge">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-phone"></use></svg>
+                </div>
+                <p>
+                  <strong>Depend&ecirc;ncia de fotos de celular</strong> sem um sistema que
+                  fa&ccedil;a a valida&ccedil;&atilde;o da foto.
+                </p>
+              </article>
+              <article class="soft-card root-problem-card">
+                <div class="icon-badge">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-refresh"></use></svg>
+                </div>
+                <p>
+                  <strong>Falta de integra&ccedil;&atilde;o</strong> entre a captura de
+                  comprovantes e o sistema de gest&atilde;o.
+                </p>
+              </article>
+              <article class="soft-card root-problem-card">
+                <div class="icon-badge">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-hourglass"></use></svg>
+                </div>
+                <p>
+                  Dificuldade em <strong>atender &agrave;s exig&ecirc;ncias dos clientes</strong> por
+                  informa&ccedil;&otilde;es em tempo.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell technology">
+        <div class="section-heading centered narrow reveal">
+          <p>
+            Com a Easy Doc, sua Transportadora pode experimentar uma transforma&ccedil;&atilde;o
+            significativa nas suas opera&ccedil;&otilde;es, com a digitaliza&ccedil;&atilde;o dos comprovantes de
+            entrega de forma descentralizada. Essa solu&ccedil;&atilde;o conta com o fornecimento de:
+          </p>
+        </div>
+
+        <div class="technology-grid">
+          <div class="technology-list">
+            <article class="outline-card reveal">
+            <div class="icon-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-briefcase"></use></svg>
+            </div>
+            <p>
+                Dispositivos customizados de hardware, para digitaliza&ccedil;&atilde;o r&aacute;pida de canhoto
+                de Nota Fiscal, Dacte e outros tipos de comprovantes, em todas as suas
+                filiais.
+            </p>
+            </article>
+            <article class="outline-card reveal">
+            <div class="icon-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-monitor"></use></svg>
+            </div>
+            <p>
+                Um software inteligente para realizar a leitura desses documentos de forma
+                automatizada, r&aacute;pida e assertiva.
+            </p>
+          </article>
+          <article class="outline-card reveal">
+              <div class="icon-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-bulb"></use></svg>
+              </div>
+              <p>
+                Esses equipamentos transformam o documento em um arquivo digital, com &oacute;tima
+                qualidade de imagem. E por serem integrados com o TMS, poder&atilde;o disponibilizar
+                a informa&ccedil;&atilde;o para seus clientes, no menor tempo poss&iacute;vel.
+              </p>
+            </article>
+          </div>
+
+          <div class="technology-visual reveal">
+            <img src="assets/images/technology.png" alt="Scanner e telas com comprovantes digitalizados" />
+          </div>
+        </div>
+
+        <div class="section-action reveal">
+          <a class="btn" href="#contato">Solicite uma demonstra&ccedil;&atilde;o</a>
+        </div>
+      </section>
+
+      <section class="benefits-section" id="beneficios">
+        <div class="benefits-bg"></div>
+        <div class="shell benefits-shell">
+          <div class="section-heading centered light reveal">
+            <h2>Leve sua Transportadora a um novo patamar com a Easy Doc</h2>
+            <p>
+              Os benef&iacute;cios das solu&ccedil;&otilde;es Easy Doc resultam em melhorias concretas para sua
+              Transportadora, como:
+            </p>
+          </div>
+
+          <div class="benefits-grid">
+            <article class="benefit-card reveal">
+              <div class="benefit-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-file"></use></svg>
+              </div>
+              <h3>Recebimento das faturas sem atrasos ou recusas</h3>
+            </article>
+            <article class="benefit-card reveal">
+              <div class="benefit-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chart"></use></svg>
+              </div>
+              <h3>Redu&ccedil;&atilde;o de custos e aumento da produtividade da equipe</h3>
+            </article>
+            <article class="benefit-card reveal">
+              <div class="benefit-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-thumb-up"></use></svg>
+              </div>
+              <h3>Fortalecimento da imagem da empresa</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell process" id="processo">
+        <div class="section-heading centered reveal">
+          <h2>Como &eacute; o nosso processo?</h2>
+          <p>
+            A Easy Doc conta com um processo de excel&ecirc;ncia para fornecer a voc&ecirc; uma solu&ccedil;&atilde;o
+            personalizada e espec&iacute;fica para as suas necessidades.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-card reveal">
+            <div class="timeline-marker">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-star"></use></svg>
+            </div>
+            <div>
+              <h3>Passo 1 - Consultoria</h3>
+              <p>
+                Realizamos uma consultoria, que conta com um mapeamento detalhado dos
+                processos e identifica&ccedil;&atilde;o dos gargalos.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-card reveal">
+            <div class="timeline-marker">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-truck"></use></svg>
+            </div>
+            <div>
+              <h3>Passo 2 - Elabora&ccedil;&atilde;o da Solu&ccedil;&atilde;o</h3>
+              <p>
+                Elaboramos uma solu&ccedil;&atilde;o personalizada, conforme as caracter&iacute;sticas da sua
+                transportadora, garantindo a m&aacute;xima efici&ecirc;ncia.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-card reveal">
+            <div class="timeline-marker">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-graduation"></use></svg>
+            </div>
+            <div>
+              <h3>Passo 3 - Implementa&ccedil;&atilde;o e treinamento</h3>
+              <p>
+                Realizamos a implementa&ccedil;&atilde;o de forma r&aacute;pida, incluindo a instala&ccedil;&atilde;o dos
+                equipamentos, a configura&ccedil;&atilde;o do software e o treinamento da equipe.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-card reveal">
+            <div class="timeline-marker">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-search"></use></svg>
+            </div>
+            <div>
+              <h3>Passo 4 - Suporte cont&iacute;nuo</h3>
+              <p>
+                Oferecemos Suporte T&eacute;cnico constante, para garantir o bom funcionamento da
+                solu&ccedil;&atilde;o e a resolu&ccedil;&atilde;o de qualquer problema que possa surgir.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-action reveal">
+          <a class="btn" href="#contato">Fale com um consultor</a>
+        </div>
+      </section>
+
+      <section class="case-section" id="case">
+        <div class="shell case-shell">
+          <div class="case-copy reveal">
+            <div class="section-heading">
+              <h2>Case de sucesso: Bora Transportes e os desafios do crescimento acelerado</h2>
+              <p>
+                A Bora Transportes &eacute; uma transportadora que realiza a transfer&ecirc;ncia e
+                distribui&ccedil;&atilde;o de alimentos nas regi&otilde;es Norte, Nordeste, MG e ES. Com 21 anos,
+                enfrentou, juntamente com o crescimento e o sucesso, os mesmos desafios
+                citados acima. Ent&atilde;o contou com nossas solu&ccedil;&otilde;es para alcan&ccedil;ar um novo
+                patamar de efici&ecirc;ncia e organiza&ccedil;&atilde;o.
+              </p>
+            </div>
+
+            <div class="stats">
+              <div class="stat-card">
+                <strong>18</strong>
+                <span>filiais</span>
+              </div>
+              <div class="stat-card">
+                <strong>300</strong>
+                <span>ve&iacute;culos</span>
+              </div>
+              <div class="stat-card">
+                <strong>21</strong>
+                <span>anos</span>
+              </div>
+            </div>
+
+            <button
+              class="case-link"
+              type="button"
+              data-video="https://www.youtube.com/embed/VZrQs3gulyI?autoplay=1"
+            >
+              <span class="case-link__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-play"></use></svg>
+              </span>
+              <span>Assista o case da Bora Transportes completo!</span>
+            </button>
+          </div>
+
+          <button
+            class="video-card case-video reveal"
+            type="button"
+            data-video="https://www.youtube.com/embed/VZrQs3gulyI?autoplay=1"
+            aria-label="Assistir case da Bora Transportes"
+          >
+            <img src="assets/images/case-video.png" alt="Case Bora Transportes" />
+            <span class="video-play">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-play"></use></svg>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section shell testimonials" id="depoimentos">
+        <div class="testimonials-track" data-carousel-track>
+          <article class="testimonial-card active">
+            <div class="testimonial-quote-mark">&ldquo;</div>
+            <p>
+              Os servi&ccedil;os da Easy Doc transformaram a nossa gest&atilde;o de comprovantes de entrega!
+              Antes, perd&iacute;amos tempo e dinheiro com documentos f&iacute;sicos. Agora, tudo &eacute;
+              digital, acess&iacute;vel em tempo real e com total seguran&ccedil;a. A rastreabilidade
+              melhorou muito, reduzindo erros e aumentando a efici&ecirc;ncia da equipe!
+            </p>
+            <span>Carlos Menezes, Gerente de Log&iacute;stica da Translog Transportes &bull; S&atilde;o Paulo - SP</span>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-quote-mark">&ldquo;</div>
+            <p>
+              Implementar a solu&ccedil;&atilde;o da Easy Doc foi um divisor de &aacute;guas para nossa empresa.
+              Conseguimos eliminar problemas com extravio de comprovantes e agilizar
+              processos de auditoria e cobran&ccedil;a. A plataforma &eacute; intuitiva e trouxe mais
+              controle sobre as entregas, melhorando nosso atendimento ao cliente.
+            </p>
+            <span>Juliana Castro, Diretora de Opera&ccedil;&otilde;es da Distribuidora Max &bull; Belo Horizonte - MG</span>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-quote-mark">&ldquo;</div>
+            <p>
+              A digitaliza&ccedil;&atilde;o dos comprovantes com a Easy Doc simplificou toda a nossa
+              rotina. Temos registros organizados, acess&iacute;veis e com validade legal, sem
+              depender de papel. Isso nos trouxe mais seguran&ccedil;a jur&iacute;dica e efici&ecirc;ncia
+              operacional. Uma solu&ccedil;&atilde;o indispens&aacute;vel para empresas de log&iacute;stica!
+            </p>
+            <span>Ricardo Almeida, Supervisor de Transporte da Expresso Norte &bull; Curitiba - PR</span>
+          </article>
+        </div>
+
+        <div class="testimonials-dots" aria-label="Navega&ccedil;&atilde;o de depoimentos">
+          <button class="is-active" type="button" data-carousel-dot="0" aria-label="Depoimento 1"></button>
+          <button type="button" data-carousel-dot="1" aria-label="Depoimento 2"></button>
+          <button type="button" data-carousel-dot="2" aria-label="Depoimento 3"></button>
+        </div>
+      </section>
+
+      <section class="brands-section" aria-label="Marcas atendidas">
+        <div class="brands-track">
+          <div class="brands-strip">
+            <img src="assets/logos/goodyear.svg" alt="Goodyear" />
+            <img src="assets/logos/danone.svg" alt="Danone" />
+            <img src="assets/logos/arno.svg" alt="Arno" />
+            <img src="assets/logos/ache.svg" alt="Ach&eacute;" />
+            <img src="assets/logos/solistica.png" alt="Solistica" />
+            <img src="assets/logos/ceratti.png" alt="Ceratti" />
+            <img src="assets/logos/yoki.svg" alt="Yoki" />
+            <img src="assets/logos/luft.svg" alt="Luft Logistics" />
+          </div>
+          <div class="brands-strip" aria-hidden="true">
+            <img src="assets/logos/goodyear.svg" alt="" />
+            <img src="assets/logos/danone.svg" alt="" />
+            <img src="assets/logos/arno.svg" alt="" />
+            <img src="assets/logos/ache.svg" alt="" />
+            <img src="assets/logos/solistica.png" alt="" />
+            <img src="assets/logos/ceratti.png" alt="" />
+            <img src="assets/logos/yoki.svg" alt="" />
+            <img src="assets/logos/luft.svg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell final-cta reveal">
+        <div class="final-cta-panel">
+          <div class="final-cta-copy">
+            <p>
+              A Bora Transportes superou desafios e alcan&ccedil;ou resultados expressivos com a
+              Easy Doc. E voc&ecirc;, est&aacute; pronto para a sua transforma&ccedil;&atilde;o digital?
+            </p>
+          </div>
+          <img src="assets/images/consultant.png" alt="Consultor da Easy Doc" />
+        </div>
+      </section>
+
+      <section class="section shell contact-section" id="contato">
+        <div class="section-heading centered reveal">
+          <h2>
+            Vamos conversar: entre em contato conosco e descubra como podemos impulsionar o
+            sucesso da sua empresa!
+          </h2>
+        </div>
+
+        <form class="contact-form reveal" novalidate>
+          <div class="field-grid">
+            <label class="field">
+              <span>Nome <strong>*</strong></span>
+              <input type="text" name="nome" placeholder="Rubem Motta Coelho" required />
+            </label>
+
+            <label class="field">
+              <span>E-mail <strong>*</strong></span>
+              <input
+                type="email"
+                name="email"
+                placeholder="rubem.coelho@logicoop.com"
+                required
+              />
+            </label>
+
+            <label class="field">
+              <span>Telefone <strong>*</strong></span>
+              <input
+                type="tel"
+                name="telefone"
+                inputmode="numeric"
+                maxlength="15"
+                placeholder="(11) 3030.3030"
+                required
+              />
+            </label>
+
+            <label class="field">
+              <span>Empresa <strong>*</strong></span>
+              <input
+                type="text"
+                name="empresa"
+                placeholder="Logicoop Log&iacute;stica e Transporte de Cargas"
+                required
+              />
+            </label>
+
+            <label class="field field-select">
+              <span>Estado <strong>*</strong></span>
+              <select name="estado" required>
+                <option value="">Selecione</option>
+                <option>AC</option>
+                <option>AL</option>
+                <option>AP</option>
+                <option>AM</option>
+                <option>BA</option>
+                <option>CE</option>
+                <option>DF</option>
+                <option>ES</option>
+                <option>GO</option>
+                <option>MA</option>
+                <option>MT</option>
+                <option>MS</option>
+                <option>MG</option>
+                <option>PA</option>
+                <option>PB</option>
+                <option>PR</option>
+                <option>PE</option>
+                <option>PI</option>
+                <option>RJ</option>
+                <option>RN</option>
+                <option>RS</option>
+                <option>RO</option>
+                <option>RR</option>
+                <option>SC</option>
+                <option selected>SP</option>
+                <option>SE</option>
+                <option>TO</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Cidade <strong>*</strong></span>
+              <input type="text" name="cidade" placeholder="Guarulhos" required />
+            </label>
+          </div>
+
+          <label class="field field-full">
+            <span>Mensagem</span>
+            <textarea
+              name="mensagem"
+              rows="5"
+              placeholder="Escreva detalhes da sua mensagem"
+              required
+            ></textarea>
+          </label>
+
+          <div class="form-footer">
+            <div class="cloudflare-box">
+              <img src="assets/images/cloudflare.png" alt="Indicador visual do captcha Cloudflare" />
+            </div>
+            <button class="btn btn-submit" type="submit">
+              Enviar solicita&ccedil;&atilde;o
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+            </button>
+          </div>
+
+          <p class="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="rodape">
+      <div class="footer-texture"></div>
+      <div class="shell footer-top">
+        <div class="footer-brand-block">
+          <img src="assets/logos/easydoc-footer.svg" alt="Easy Doc" />
+          <p>Todos os direitos reservados</p>
+        </div>
+
+        <div class="footer-help">
+          <span>Como podemos ajudar</span>
+          <a href="tel:+551122273076">+55 (11) 2227.3076</a>
+        </div>
+      </div>
+
+      <div class="shell footer-bottom">
+        <p>Rua Lauro Luchesi, 381, Jardim Leonor Mendes de Barros, S&atilde;o Paulo - SP, CEP 02348-090</p>
+        <p>Desenvolvido por Abrasivo Digital</p>
+      </div>
+    </footer>
+
+    <div class="video-modal" data-video-modal hidden>
+      <div class="video-modal__backdrop" data-video-close></div>
+      <div class="video-modal__dialog" role="dialog" aria-modal="true" aria-label="Player de v&iacute;deo">
+        <button class="video-modal__close" type="button" data-video-close aria-label="Fechar v&iacute;deo">
+          &times;
+        </button>
+        <div class="video-modal__frame">
+          <iframe
+            data-video-frame
+            src=""
+            title="V&iacute;deo Easy Doc"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

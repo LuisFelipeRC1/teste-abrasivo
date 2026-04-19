@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="84" height="20">
+	<rect fill-opacity="0" width="84" height="20"/>
+	<rect fill="#1E1E1E" width="83.125" height="20"/>
+	<rect fill="white" transform="translate(-342.528 -7164.5)" width="1920" height="8739"/>
+	<clipPath id="cl_60">
+		<rect x="-342.52753" y="-7164.5" width="1920" height="8739"/>
+	</clipPath>
+	<g clip-path="url(#cl_60)">
+		<clipPath id="cl_63">
+			<rect x="576.91644" y="-6345.5" width="80" height="80" rx="40" ry="40"/>
+		</clipPath>
+		<g clip-path="url(#cl_63)">
+			<ellipse transform="translate(576.916 -6345.5)" cx="40" cy="40" rx="40" ry="40"/>
+		</g>
+	</g>
+	<clipPath id="cl_64">
+		<rect x="664.47247" y="-7748.5" width="0" height="0"/>
+	</clipPath>
+	<g clip-path="url(#cl_64)">
+		<clipPath id="cl_1">
+			<rect/>
+		</clipPath>
+		<g clip-path="url(#cl_1)">
+			<ellipse transform="translate(576.916 -6345.5)" cx="40" cy="40" rx="40" ry="40"/>
+		</g>
+	</g>
+	<clipPath id="cl_66">
+		<rect x="-342.52753" y="-7164.5" width="1920" height="8739"/>
+	</clipPath>
+	<g clip-path="url(#cl_66)">
+		<clipPath id="cl_67">
+			<path d="M613.49237 -6297.5488L625.98431 -6304.6655C626.25 -6304.811 626.25 -6305.189 625.98431 -6305.3364L613.49237 -6312.4512C613.23444 -6312.5933 612.91644 -6312.4092 612.91644 -6312.1157L612.91644 -6297.8843C612.91644 -6297.5908 613.23444 -6297.4067 613.49237 -6297.5488Z" clip-rule="evenodd"/>
+		</clipPath>
+		<g clip-path="url(#cl_67)">
+			<path transform="translate(612.916 -6312.5)" d="M0.57592595 14.951165L13.067896 7.8345499C13.333559 7.6888433 13.333559 7.3111563 13.067896 7.1635327L0.57592595 0.048835382C0.31801969 -0.093036786 0 0.09101361 0 0.38434389L0 14.615657C0 14.908987 0.31801969 15.093038 0.57592595 14.951165Z" fill-rule="evenodd"/>
+		</g>
+	</g>
+	<clipPath id="cl_135">
+		<rect x="-342.52759" y="-7164.5" width="1920" height="8739"/>
+	</clipPath>
+	<g clip-path="url(#cl_135)">
+		<clipPath id="cl_138">
+			<rect x="1057.25" y="-912.5" width="80" height="80" rx="40" ry="40"/>
+		</clipPath>
+		<g clip-path="url(#cl_138)">
+			<ellipse transform="translate(1057.25 -912.5)" cx="40" cy="40" rx="40" ry="40"/>
+		</g>
+	</g>
+	<clipPath id="cl_139">
+		<rect x="664.47247" y="-7748.5" width="0" height="0"/>
+	</clipPath>
+	<g clip-path="url(#cl_139)">
+		<clipPath id="cl_1">
+			<rect/>
+		</clipPath>
+		<g clip-path="url(#cl_1)">
+			<ellipse transform="translate(1057.25 -912.5)" cx="40" cy="40" rx="40" ry="40"/>
+		</g>
+	</g>
+	<clipPath id="cl_13b">
+		<rect x="-342.52759" y="-7164.5" width="1920" height="8739"/>
+	</clipPath>
+	<g clip-path="url(#cl_13b)">
+		<clipPath id="cl_13c">
+			<path d="M1093.8259 -864.54883L1106.3179 -871.66547C1106.5836 -871.81116 1106.5836 -872.18884 1106.3179 -872.33649L1093.8259 -879.45117C1093.568 -879.59302 1093.25 -879.409 1093.25 -879.11566L1093.25 -864.88434C1093.25 -864.591 1093.568 -864.40698 1093.8259 -864.54883Z" clip-rule="evenodd"/>
+		</clipPath>
+		<g clip-path="url(#cl_13c)">
+			<path transform="translate(1093.25 -879.5)" d="M0.57592595 14.951165L13.067896 7.8345499C13.333559 7.6888433 13.333559 7.3111563 13.067896 7.1635327L0.57592595 0.048835382C0.31801969 -0.093036786 0 0.09101361 0 0.38434389L0 14.615657C0 14.908987 0.31801969 15.093038 0.57592595 14.951165Z" fill-rule="evenodd"/>
+		</g>
+	</g>
+</svg>
