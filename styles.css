@@ -271,6 +271,7 @@ button {
   width: 18px;
   height: 18px;
   flex: none;
+  transform: rotate(-45deg);
 }
 
 .btn-header {
