@@ -267,6 +267,12 @@ button {
   height: 18px;
 }
 
+.btn-tech-demo svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
 .btn-header {
   min-height: 42px;
   padding: 5px 20px;
@@ -681,8 +687,8 @@ button {
 .benefit-badge svg,
 .timeline-marker svg,
 .case-link__icon svg {
-  width: 22px;
-  height: 22px;
+  width: 36px;
+  height: 36px;
 }
 
 .issue-card .icon-badge {
@@ -981,6 +987,10 @@ button {
   display: flex;
   justify-content: center;
   margin-top: 36px;
+}
+
+.section-action .btn svg {
+  transform: rotate(-45deg);
 }
 
 .benefits-section {
