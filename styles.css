@@ -685,6 +685,14 @@ button {
   height: 22px;
 }
 
+.issue-card .icon-badge {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
 .difficulties {
   padding-top: 10px;
 }
