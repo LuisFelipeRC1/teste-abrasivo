@@ -1619,15 +1619,35 @@ button {
 }
 
 .footer-brand-block img {
-  width: 110px;
+  width: 160px;
 }
 
-.footer-brand-block p,
 .footer-help span,
 .footer-bottom p {
   margin: 0;
   color: rgba(255, 255, 255, 0.92);
   font-size: 0.95rem;
+}
+
+.footer-brand-block p {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.footer-brand-block p::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 12.69px;
+  background: #ffffff;
 }
 
 .footer-help {
@@ -2428,6 +2448,14 @@ button {
     flex-direction: column;
     align-items: flex-start;
     gap: 14px;
+  }
+
+  .footer-brand-block p {
+    line-height: 1.6;
+  }
+
+  .footer-brand-block p::before {
+    display: none;
   }
 
   .footer-help {
