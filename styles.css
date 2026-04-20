@@ -131,6 +131,7 @@ button {
 
 .header-shell {
   width: var(--container-wide);
+  position: relative;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
@@ -150,13 +151,16 @@ button {
 }
 
 .brand {
+  position: static;
+  transform: none;
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
+  margin-left: 50px;
 }
 
 .brand img {
-  width: 203px;
+  width: 154px;
   height: auto;
 }
 
@@ -1281,19 +1285,31 @@ button {
 .brands-section {
   overflow: hidden;
   padding: 34px 0 12px;
+  display: flex;
+  justify-content: center;
 }
 
 .brands-track {
   display: flex;
-  width: max-content;
-  animation: marquee 28s linear infinite;
+  width: min(100%, 1214px);
+  margin: 0;
+  justify-content: center;
+  animation: none;
+  transform: translateX(-320px);
 }
 
 .brands-strip {
   display: flex;
   align-items: center;
-  gap: 58px;
-  padding-right: 58px;
+  width: 100%;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: clamp(34px, 3.2vw, 58px);
+  padding-right: 0;
+}
+
+.brands-strip[aria-hidden="true"] {
+  display: none;
 }
 
 .brands-strip img {
@@ -1301,6 +1317,15 @@ button {
   width: auto;
   opacity: 0.62;
   filter: grayscale(100%);
+}
+
+.brands-strip img[src$="arno.svg"],
+.brands-strip img[src$="ache.svg"] {
+  height: 28px;
+}
+
+.brands-strip img[src$="goodyear.svg"] {
+  height: 36px;
 }
 
 .final-cta {
@@ -1506,7 +1531,25 @@ button {
 }
 
 .btn-submit {
-  min-width: 240px;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  border-radius: 5px;
+  background: transparent;
+  box-shadow: none;
+}
+
+.btn-submit img {
+  display: block;
+  width: min(201px, 100%);
+  height: auto;
+}
+
+.btn-submit:hover,
+.btn-submit:focus-visible {
+  background: transparent;
+  box-shadow: none;
+  transform: translateY(-1px);
 }
 
 .form-feedback {
@@ -1840,7 +1883,12 @@ button {
   }
 
   .brand img {
-    width: 124px;
+    width: 99px;
+  }
+
+  .brand {
+    position: static;
+    transform: none;
   }
 
   .desktop-nav,
@@ -2082,12 +2130,26 @@ button {
   }
 
   .brands-strip {
+    flex-wrap: wrap;
     gap: 34px;
     padding-right: 34px;
   }
 
+  .brands-track {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    transform: none;
+  }
+
   .brands-strip img {
     height: 30px;
+  }
+
+  .brands-strip img[src$="arno.svg"],
+  .brands-strip img[src$="ache.svg"] {
+    height: 20px;
   }
 
   .contact-form {
@@ -2105,6 +2167,10 @@ button {
   }
 
   .btn-submit {
+    width: 100%;
+  }
+
+  .btn-submit img {
     width: 100%;
   }
 
@@ -2126,7 +2192,7 @@ button {
   }
 
   .brand img {
-    width: 118px;
+    width: 94px;
   }
 
   .hero-section {
