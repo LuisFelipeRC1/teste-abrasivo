@@ -14,10 +14,13 @@ const mediaDesktop = window.matchMedia("(min-width: 921px)");
 
 const syncBodyScroll = () => {
   const menuOpen = header?.classList.contains("menu-open");
-  document.body.style.overflow = menuOpen && !mediaDesktop.matches ? "hidden" : "";
+  const videoOpen = Boolean(videoModal && !videoModal.hidden);
+  document.body.style.overflow =
+    videoOpen || (menuOpen && !mediaDesktop.matches) ? "hidden" : "";
 };
 
 const setHeaderState = () => {
+  if (!header) return;
   header.classList.toggle("is-scrolled", window.scrollY > 20);
 };
 
@@ -78,14 +81,14 @@ const openVideo = (url) => {
   if (!videoModal || !videoFrame) return;
   videoFrame.src = url;
   videoModal.hidden = false;
-  document.body.style.overflow = "hidden";
+  syncBodyScroll();
 };
 
 const closeVideo = () => {
   if (!videoModal || !videoFrame) return;
   videoModal.hidden = true;
   videoFrame.src = "";
-  document.body.style.overflow = "";
+  syncBodyScroll();
 };
 
 videoTriggers.forEach((trigger) => {

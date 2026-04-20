@@ -1265,58 +1265,40 @@ button {
   background: #e10014;
 }
 
-.testimonials-dots {
-  margin-top: 22px;
-}
-
-.testimonials-dots button {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(33, 33, 33, 0.2);
-  transition: transform var(--transition), background var(--transition);
-}
-
-.testimonials-dots button.is-active {
-  transform: scale(1.25);
-  background: var(--brand-red);
-}
-
 .brands-section {
-  overflow: hidden;
-  padding: 34px 0 12px;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+  padding: 20px 0 0;
 }
 
 .brands-track {
   display: flex;
-  width: min(100%, 1214px);
-  margin: 0;
   justify-content: center;
-  animation: none;
-  transform: translateX(-320px);
+  width: 100%;
+  overflow: hidden;
 }
 
 .brands-strip {
   display: flex;
   align-items: center;
-  width: 100%;
+  flex-direction: row;
   justify-content: flex-start;
   flex-wrap: nowrap;
-  gap: clamp(34px, 3.2vw, 58px);
-  padding-right: 0;
-}
-
-.brands-strip[aria-hidden="true"] {
-  display: none;
+  width: max-content;
+  min-width: 2633.56px;
+  height: 75px;
+  padding: 20px 0 0;
+  gap: 80px;
+  opacity: 0.7;
 }
 
 .brands-strip img {
+  flex: 0 0 auto;
   height: 42px;
   width: auto;
-  opacity: 0.62;
   filter: grayscale(100%);
+  object-fit: contain;
 }
 
 .brands-strip img[src$="arno.svg"],
@@ -1336,8 +1318,8 @@ button {
 
 .final-cta-panel {
   width: min(1214px, 100%);
-  min-height: clamp(110px, 10vw, 135px);
-  padding: clamp(8px, 1vw, 14px) clamp(10px, 1.6vw, 22px);
+  min-height: clamp(220px, 23vw, 320px);
+  padding: clamp(18px, 2vw, 30px) clamp(18px, 2.4vw, 36px);
   border-radius: 20px;
   background:
     radial-gradient(circle at 84% 24%, rgba(255, 237, 238, 0.38) 0 4px, transparent 5px),
@@ -1347,7 +1329,8 @@ button {
     linear-gradient(180deg, rgba(209, 0, 16, 0.95), rgba(168, 0, 0, 0.95)),
     url("assets/images/texture-dark.jpg") center / cover no-repeat;
   background-blend-mode: multiply, normal;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
   align-items: center;
   justify-content: space-between;
   gap: clamp(18px, 2.5vw, 44px);
@@ -1356,47 +1339,15 @@ button {
   overflow: hidden;
 }
 
-.final-cta-panel::before {
-  content: "";
-  position: absolute;
-  width: min(176px, 15vw);
-  aspect-ratio: 1 / 1;
-  right: 188px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 0;
-  border: 3px solid rgba(255, 237, 238, 0.25);
-  border-radius: 50%;
-  filter: blur(1.2px);
-}
-
-.final-cta-panel::after {
-  content: "";
-  position: absolute;
-  width: min(248px, 21vw);
-  aspect-ratio: 1 / 1;
-  right: 152px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 0;
-  border: 2px solid rgba(255, 237, 238, 0.18);
-  border-radius: 50%;
-  filter: blur(1px);
-  box-shadow:
-    -140px -70px 0 -208px rgba(255, 237, 238, 0.44),
-    -20px 96px 0 -212px rgba(255, 237, 238, 0.36),
-    96px -20px 0 -214px rgba(255, 237, 238, 0.32);
-}
-
 .final-cta-copy {
   position: relative;
   z-index: 2;
-  max-width: min(557px, 56%);
+  max-width: 100%;
   color: var(--paper);
   font-family: "Readex Pro", sans-serif;
-  font-size: clamp(0.92rem, 0.8vw + 0.66rem, 1.25rem);
+  font-size: clamp(1rem, 0.85vw + 0.72rem, 1.25rem);
   font-weight: 300;
-  line-height: 1.42;
+  line-height: 1.52;
   letter-spacing: -0.02em;
 }
 
@@ -1408,13 +1359,51 @@ button {
   font-weight: 700;
 }
 
+.final-cta-visual {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: end center;
+  min-height: clamp(210px, 22vw, 290px);
+  padding-inline: clamp(4px, 1vw, 18px);
+  isolation: isolate;
+}
+
+.final-cta-visual::before,
+.final-cta-visual::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 57%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.final-cta-visual::before {
+  width: min(228px, 72%);
+  aspect-ratio: 1 / 1;
+  border: 3px solid rgba(255, 237, 238, 0.25);
+  filter: blur(1.2px);
+}
+
+.final-cta-visual::after {
+  width: min(320px, 100%);
+  aspect-ratio: 1 / 1;
+  border: 2px solid rgba(255, 237, 238, 0.18);
+  filter: blur(1px);
+  box-shadow:
+    -118px -58px 0 -154px rgba(255, 237, 238, 0.4),
+    -16px 84px 0 -160px rgba(255, 237, 238, 0.36),
+    88px -20px 0 -162px rgba(255, 237, 238, 0.3);
+}
+
 .final-cta-image {
   position: relative;
   z-index: 2;
-  width: min(220px, 19vw);
-  align-self: flex-end;
-  margin-right: clamp(0px, 1vw, 14px);
-  margin-bottom: clamp(-50px, -3.4vw, -30px);
+  width: min(320px, 100%);
+  max-width: 100%;
+  align-self: end;
 }
 
 .final-cta-image img {
@@ -1422,7 +1411,8 @@ button {
   width: 100%;
   height: auto;
   object-fit: contain;
-  transform: translateX(-130px) translateY(-12px);
+  transform: none;
+  filter: drop-shadow(0 18px 28px rgba(39, 0, 0, 0.16));
 }
 
 .contact-section {
@@ -1738,15 +1728,6 @@ button {
   transform: translateY(0);
 }
 
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
 @media (max-width: 1180px) {
   .header-shell {
     grid-template-columns: auto minmax(0, 1fr) auto;
@@ -1845,32 +1826,29 @@ button {
   }
 
   .final-cta-panel {
-    min-height: 74px;
-    padding: 6px 10px;
+    min-height: clamp(210px, 25vw, 280px);
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.82fr);
+    padding: 18px 20px 10px;
   }
 
   .final-cta-copy {
-    max-width: 58%;
-    font-size: clamp(0.92rem, 0.95vw, 1.1rem);
+    font-size: clamp(0.98rem, 0.8vw + 0.78rem, 1.12rem);
+  }
+
+  .final-cta-visual {
+    min-height: 220px;
+  }
+
+  .final-cta-visual::before {
+    width: min(200px, 74%);
+  }
+
+  .final-cta-visual::after {
+    width: min(276px, 98%);
   }
 
   .final-cta-image {
-    width: min(220px, 24vw);
-    margin-bottom: -20px;
-  }
-
-  .final-cta-panel::before {
-    width: min(152px, 14vw);
-    right: 190px;
-  }
-
-  .final-cta-panel::after {
-    width: min(204px, 18vw);
-    right: 130px;
-  }
-
-  .final-cta-image img {
-    transform: translateX(-28px);
+    width: min(248px, 100%);
   }
 
   .field-grid {
@@ -1909,6 +1887,7 @@ button {
   .brand {
     position: static;
     transform: none;
+    margin-left: 0;
   }
 
   .desktop-nav,
@@ -2052,8 +2031,8 @@ button {
 
   .mini-cta-panel::before {
     background:
-      radial-gradient(circle at 50% 100%, transparent 0 50px, rgba(255, 239, 240, 0.14) 51px 54px, transparent 55px),
-      radial-gradient(circle at 50% 100%, transparent 0 80px, rgba(255, 239, 240, 0.1) 81px 84px, transparent 85px),
+      radial-gradient(circle at 85% 56%, transparent 0 54px, rgba(255, 239, 240, 0.14) 55px 58px, transparent 59px),
+      radial-gradient(circle at 85% 56%, transparent 0 86px, rgba(255, 239, 240, 0.1) 87px 90px, transparent 91px),
       radial-gradient(circle at 25% 20%, rgba(255, 237, 238, 0.32) 0 2px, transparent 3px),
       radial-gradient(circle at 75% 15%, rgba(255, 237, 238, 0.26) 0 2px, transparent 3px),
       radial-gradient(circle at 20% 70%, rgba(255, 237, 238, 0.2) 0 1.5px, transparent 2.5px),
@@ -2151,25 +2130,34 @@ button {
 
   .brands-strip {
     flex-wrap: wrap;
-    gap: 34px;
-    padding-right: 34px;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    padding-top: 0;
+    gap: 22px 28px;
+    opacity: 0.7;
   }
 
   .brands-track {
-    display: flex;
     width: 100%;
-    margin: 0;
-    justify-content: center;
-    transform: none;
   }
 
   .brands-strip img {
     height: 30px;
+    max-width: 120px;
   }
 
   .brands-strip img[src$="arno.svg"],
   .brands-strip img[src$="ache.svg"] {
     height: 20px;
+  }
+
+  /* Keep loop repetition on desktop, but remove duplicated logos on mobile. */
+  .brands-strip img:nth-child(4),
+  .brands-strip img:nth-child(10),
+  .brands-strip img:nth-child(11) {
+    display: none;
   }
 
   .contact-form {
@@ -2187,7 +2175,9 @@ button {
   }
 
   .btn-submit {
-    width: 100%;
+    width: 50%;
+    max-width: 201px;
+    align-self: flex-start;
   }
 
   .btn-submit img {
@@ -2304,13 +2294,13 @@ button {
   }
 
   .mini-cta-panel {
-    min-height: 172px;
+    min-height: 188px;
     padding: 12px 12px 10px;
-    border-radius: 16px 22px;
+    border-radius: 20px;
   }
 
   .mini-cta-robot {
-    width: clamp(88px, 30vw, 118px);
+    width: clamp(98px, 31vw, 126px);
   }
 
   .mini-cta-copy {
@@ -2335,9 +2325,20 @@ button {
   }
 
   .mini-cta-robot {
-    width: 88px;
-    margin-right: -6px;
-    margin-bottom: -4px;
+    width: 100px;
+    margin-right: -4px;
+    margin-bottom: -2px;
+  }
+
+  .mini-cta-panel::before {
+    background:
+      radial-gradient(circle at 85% 56%, transparent 0 50px, rgba(255, 239, 240, 0.14) 51px 54px, transparent 55px),
+      radial-gradient(circle at 85% 56%, transparent 0 78px, rgba(255, 239, 240, 0.1) 79px 82px, transparent 83px),
+      radial-gradient(circle at 25% 20%, rgba(255, 237, 238, 0.32) 0 2px, transparent 3px),
+      radial-gradient(circle at 75% 15%, rgba(255, 237, 238, 0.26) 0 2px, transparent 3px),
+      radial-gradient(circle at 20% 70%, rgba(255, 237, 238, 0.2) 0 1.5px, transparent 2.5px),
+      radial-gradient(circle at 80% 75%, rgba(255, 237, 238, 0.24) 0 1.5px, transparent 2.5px),
+      linear-gradient(105deg, rgba(255, 255, 255, 0.04), transparent 50%);
   }
 
   .stats {
@@ -2400,13 +2401,31 @@ button {
     justify-content: flex-start;
   }
 
+  .brands-strip {
+    gap: 18px 20px;
+  }
+
+  .brands-strip img {
+    height: 26px;
+    max-width: 108px;
+  }
+
+  .brands-strip img[src$="arno.svg"],
+  .brands-strip img[src$="ache.svg"] {
+    height: 18px;
+  }
+
+  .brands-strip img[src$="goodyear.svg"] {
+    height: 22px;
+  }
+
   .final-cta-panel {
     min-height: 0;
-    padding: 18px 14px;
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 22px 14px 8px;
     text-align: center;
-    gap: 12px;
+    gap: 10px;
   }
 
   .final-cta-copy {
@@ -2415,29 +2434,27 @@ button {
     line-height: 1.36;
   }
 
-  .final-cta-panel::before,
-  .final-cta-panel::after {
-    right: 50%;
-    top: 64%;
-    transform: translate(50%, -50%);
+  .final-cta-visual {
+    width: 100%;
+    min-height: 198px;
+    padding-inline: 0;
   }
 
-  .final-cta-panel::before {
-    width: 132px;
+  .final-cta-visual::before,
+  .final-cta-visual::after {
+    top: 55%;
   }
 
-  .final-cta-panel::after {
-    width: 176px;
+  .final-cta-visual::before {
+    width: min(156px, 68%);
+  }
+
+  .final-cta-visual::after {
+    width: min(214px, 92%);
   }
 
   .final-cta-image {
-    width: min(176px, 41vw);
-    margin-right: 0;
-    margin-bottom: -6px;
-  }
-
-  .final-cta-image img {
-    transform: translateX(-16px);
+    width: min(182px, 72%);
   }
 
   .site-footer {
