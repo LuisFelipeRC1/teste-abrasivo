@@ -6,15 +6,11 @@ const videoModal = document.querySelector("[data-video-modal]");
 const videoFrame = document.querySelector("[data-video-frame]");
 const videoTriggers = document.querySelectorAll("[data-video]");
 const videoClosers = document.querySelectorAll("[data-video-close]");
-const carouselTrack = document.querySelector("[data-carousel-track]");
-const carouselDots = document.querySelectorAll("[data-carousel-dot]");
 const contactForm = document.querySelector(".contact-form");
 const feedback = document.querySelector(".form-feedback");
 const phoneInput = document.querySelector('input[name="telefone"]');
 
 const mediaDesktop = window.matchMedia("(min-width: 921px)");
-let carouselIndex = 0;
-let carouselTimer = null;
 
 const syncBodyScroll = () => {
   const menuOpen = header?.classList.contains("menu-open");
@@ -107,43 +103,9 @@ window.addEventListener("keydown", (event) => {
   }
 });
 
-const slides = carouselTrack ? [...carouselTrack.children] : [];
-
-const goToSlide = (index) => {
-  if (!slides.length || !mediaDesktop.matches) return;
-
-  carouselIndex = (index + slides.length) % slides.length;
-  slides.forEach((slide, slideIndex) => {
-    slide.classList.toggle("active", slideIndex === carouselIndex);
-  });
-  carouselDots.forEach((dot, dotIndex) => {
-    dot.classList.toggle("is-active", dotIndex === carouselIndex);
-  });
-};
-
-const startCarousel = () => {
-  clearInterval(carouselTimer);
-  if (!mediaDesktop.matches || slides.length < 2) return;
-  carouselTimer = window.setInterval(() => {
-    goToSlide(carouselIndex + 1);
-  }, 5200);
-};
-
-carouselDots.forEach((dot) => {
-  dot.addEventListener("click", () => {
-    goToSlide(Number(dot.dataset.carouselDot));
-    startCarousel();
-  });
-});
-
 mediaDesktop.addEventListener("change", () => {
   closeMenu();
-  goToSlide(0);
-  startCarousel();
 });
-
-goToSlide(0);
-startCarousel();
 
 const formatPhone = (value) => {
   const digits = value.replace(/\D/g, "").slice(0, 11);
