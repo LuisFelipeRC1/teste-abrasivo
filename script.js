@@ -132,10 +132,11 @@ const phoneIsValid = (value) => value.replace(/\D/g, "").length >= 10;
 
 const validateField = (field) => {
   const wrapper = field.closest(".field, .field-full");
-  let valid = field.value.trim() !== "";
+  const value = field.value.trim();
+  let valid = !field.required || value !== "";
 
-  if (valid && field.type === "email") valid = emailIsValid(field.value.trim());
-  if (valid && field.name === "telefone") valid = phoneIsValid(field.value);
+  if (valid && value && field.type === "email") valid = emailIsValid(value);
+  if (valid && value && field.name === "telefone") valid = phoneIsValid(field.value);
 
   wrapper?.classList.toggle("is-invalid", !valid);
   return valid;
@@ -143,6 +144,9 @@ const validateField = (field) => {
 
 if (contactForm) {
   const fields = [...contactForm.querySelectorAll("input, textarea, select")];
+  const scrollFeedbackIntoView = () => {
+    feedback?.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
 
   fields.forEach((field) => {
     field.addEventListener("blur", () => validateField(field));
@@ -154,16 +158,19 @@ if (contactForm) {
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const valid = fields.every((field) => validateField(field));
+    const invalidFields = fields.filter((field) => !validateField(field));
+    const valid = invalidFields.length === 0;
 
     if (!valid) {
       feedback.textContent =
-        "Confira os campos destacados. O formulario precisa estar completo para prosseguir.";
+        "Confira os campos destacados. O formul\u00e1rio precisa estar completo para prosseguir.";
+      scrollFeedbackIntoView();
       return;
     }
 
     feedback.textContent =
-      "Solicitacao validada com sucesso. Sua mensagem esta pronta para envio.";
+      "Solicita\u00e7\u00e3o validada com sucesso. Seu formul\u00e1rio est\u00e1 pronto para envio.";
+    scrollFeedbackIntoView();
     contactForm.reset();
     const stateField = contactForm.querySelector('select[name="estado"]');
     if (stateField) stateField.value = "SP";
