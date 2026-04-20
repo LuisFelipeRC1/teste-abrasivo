@@ -1,6 +1,9 @@
 .tools/
 .fig-extracted/
 node_modules/
+.lighthouse/
+playwright-report/
+test-results/
 .DS_Store
 *.zip
 .env

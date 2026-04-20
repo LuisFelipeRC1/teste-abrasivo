@@ -3,18 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Easy Doc | Landing Page</title>
+    <title>Easy Doc | Digitalização de Comprovantes de Entrega</title>
     <meta
       name="description"
       content="Digitaliza&ccedil;&atilde;o de comprovantes de entrega para transportadoras com mais agilidade, rastreabilidade e efici&ecirc;ncia."
     />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#d10010" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta
+      property="og:title"
+      content="Easy Doc | Digitaliza&ccedil;&atilde;o de Comprovantes de Entrega"
+    />
+    <meta
+      property="og:description"
+      content="Transforme a opera&ccedil;&atilde;o da sua transportadora com digitaliza&ccedil;&atilde;o r&aacute;pida, rastreabilidade e mais efici&ecirc;ncia."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/logos/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="assets/images/hero-video.png" as="image" fetchpriority="high" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Readex+Pro:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260420" />
   </head>
   <body>
     <svg class="icon-defs" aria-hidden="true">
@@ -125,7 +140,13 @@
     <header class="site-header" id="topo">
       <div class="shell header-shell">
         <a class="brand" href="#inicio" aria-label="Easy Doc">
-          <img src="assets/logos/easydoc-wordmark.svg" alt="Easy Doc" />
+          <img
+            src="assets/logos/easydoc-wordmark.svg"
+            alt="Easy Doc"
+            width="193"
+            height="20"
+            decoding="async"
+          />
         </a>
 
         <nav class="desktop-nav" aria-label="Navega&ccedil;&atilde;o principal">
@@ -210,7 +231,14 @@
             data-video="https://www.youtube.com/embed/BOLSMaepKU4?autoplay=1"
             aria-label="Assistir v&iacute;deo da se&ccedil;&atilde;o inicial"
           >
-            <img src="assets/images/hero-video.png" alt="V&iacute;deo demonstrativo da Easy Doc" />
+            <img
+              src="assets/images/hero-video.png"
+              alt="V&iacute;deo demonstrativo da Easy Doc"
+              width="768"
+              height="403"
+              decoding="async"
+              fetchpriority="high"
+            />
             <span class="video-play">
               <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-play"></use></svg>
             </span>
@@ -303,13 +331,28 @@
               <span>&ndash; mas complexo tecnicamente de resolver</span>
             </h2>
           </div>
-          <img class="mini-cta-robot" src="assets/images/robot.png" alt="Mascote da Easy Doc" />
+          <img
+            class="mini-cta-robot"
+            src="assets/images/robot.png"
+            alt="Mascote da Easy Doc"
+            width="360"
+            height="480"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </section>
 
       <section class="section split-problem root-problem">
         <div class="split-media root-problem-media reveal">
-          <img src="assets/images/root-problem.png" alt="Equipamentos de digitaliza&ccedil;&atilde;o Easy Doc" />
+          <img
+            src="assets/images/root-problem.png"
+            alt="Equipamentos de digitaliza&ccedil;&atilde;o Easy Doc"
+            width="1200"
+            height="900"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div class="split-copy root-problem-copy reveal">
           <div class="root-problem-inner" id="tecnologia">
@@ -398,7 +441,14 @@
           </div>
 
           <div class="technology-visual reveal">
-            <img src="assets/images/technology.png" alt="Scanner e telas com comprovantes digitalizados" />
+            <img
+              src="assets/images/technology.png"
+              alt="Scanner e telas com comprovantes digitalizados"
+              width="1200"
+              height="900"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
 
@@ -562,7 +612,14 @@
             data-video="https://www.youtube.com/embed/VZrQs3gulyI?autoplay=1"
             aria-label="Assistir case da Bora Transportes"
           >
-            <img src="assets/images/case-video.png" alt="Case Bora Transportes" />
+            <img
+              src="assets/images/case-video.png"
+              alt="Case Bora Transportes"
+              width="768"
+              height="403"
+              loading="lazy"
+              decoding="async"
+            />
             <span class="video-play">
               <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-play"></use></svg>
             </span>
@@ -577,10 +634,21 @@
             src="assets/images/quote-top.svg"
             alt=""
             aria-hidden="true"
+            width="113"
+            height="70"
+            loading="lazy"
+            decoding="async"
           />
 
           <figure class="testimonial-card__avatar" aria-hidden="true">
-            <img src="assets/images/avatar-carlos.svg" alt="" />
+            <img
+              src="assets/images/avatar-carlos.svg"
+              alt=""
+              width="140"
+              height="140"
+              loading="lazy"
+              decoding="async"
+            />
           </figure>
 
           <div class="testimonial-card__content">
@@ -604,6 +672,10 @@
             src="assets/images/quote-bottom.svg"
             alt=""
             aria-hidden="true"
+            width="113"
+            height="70"
+            loading="lazy"
+            decoding="async"
           />
         </article>
 
@@ -614,21 +686,27 @@
         </div>
       </section>
 
-      <section class="brands-section" aria-label="Marcas atendidas">
+      <section class="brands brands-section" aria-label="Marcas atendidas">
         <div class="brands-track">
           <div class="brands-strip">
-            <img src="assets/logos/arno.svg" alt="Arno" />
             <img src="assets/logos/goodyear.svg" alt="Goodyear" />
             <img src="assets/logos/danone.svg" alt="Danone" />
             <img src="assets/logos/arno.svg" alt="Arno" />
             <img src="assets/logos/ache.svg" alt="Ach&eacute;" />
-            <img src="assets/logos/solistica.png" alt="Solistica" />
-            <img src="assets/logos/ceratti.png" alt="Ceratti" />
-            <img src="assets/logos/parceira-ceratti.svg" alt="Nova marca parceira" />
-            <img src="assets/logos/luft.svg" alt="Luft" />
-            <img src="assets/logos/goodyear.svg" alt="Goodyear" />
-            <img src="assets/logos/danone.svg" alt="Danone" />
+            <img src="assets/logos/solistica.svg" alt="Solistica" />
+            <img src="assets/logos/ceratti.svg" alt="Ceratti" />
             <img src="assets/logos/yoki.svg" alt="Yoki" />
+            <img src="assets/logos/luft.svg" alt="Luft" />
+          </div>
+          <div class="brands-strip" aria-hidden="true">
+            <img src="assets/logos/goodyear.svg" alt="" />
+            <img src="assets/logos/danone.svg" alt="" />
+            <img src="assets/logos/arno.svg" alt="" />
+            <img src="assets/logos/ache.svg" alt="" />
+            <img src="assets/logos/solistica.svg" alt="" />
+            <img src="assets/logos/ceratti.svg" alt="" />
+            <img src="assets/logos/yoki.svg" alt="" />
+            <img src="assets/logos/luft.svg" alt="" />
           </div>
         </div>
       </section>
@@ -802,6 +880,6 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260420"></script>
   </body>
 </html>

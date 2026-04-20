@@ -1009,6 +1009,8 @@ button {
 
 .technology-visual img {
   width: min(720px, 100%);
+  height: auto;
+  object-fit: contain;
 }
 
 .section-action {
@@ -1288,49 +1290,112 @@ button {
   background: #e10014;
 }
 
-.brands-section {
+.brands {
+  --brands-gap: 80px;
   display: flex;
-  justify-content: center;
+  width: 100%;
   overflow: hidden;
   padding: 20px 0 0;
+  position: relative;
+}
+
+.brands::before,
+.brands::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(24px, 4vw, 56px);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.brands::before {
+  left: 0;
+  background: url("assets/images/brands-fade-left.svg") center / 100% 100% no-repeat;
+}
+
+.brands::after {
+  right: 0;
+  background: url("assets/images/brands-fade-right.svg") center / 100% 100% no-repeat;
 }
 
 .brands-track {
   display: flex;
-  justify-content: center;
-  width: 100%;
-  overflow: hidden;
+  width: max-content;
+  animation: brands-marquee var(--brands-duration, 30s) linear infinite;
+  will-change: transform;
+}
+
+.brands:hover .brands-track {
+  animation-play-state: paused;
 }
 
 .brands-strip {
   display: flex;
   align-items: center;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  width: max-content;
-  min-width: 2633.56px;
-  height: 75px;
-  padding: 20px 0 0;
-  gap: 80px;
-  opacity: 0.7;
+  flex-shrink: 0;
+  min-width: max-content;
+  gap: var(--brands-gap);
+  padding-right: var(--brands-gap);
+}
+
+@keyframes brands-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .brands-strip img {
-  flex: 0 0 auto;
-  height: 42px;
+  display: block;
+  flex-shrink: 0;
+  height: 35px;
   width: auto;
-  filter: grayscale(100%);
   object-fit: contain;
-}
-
-.brands-strip img[src$="arno.svg"],
-.brands-strip img[src$="ache.svg"] {
-  height: 28px;
+  opacity: 0.7;
 }
 
 .brands-strip img[src$="goodyear.svg"] {
-  height: 36px;
+  width: 104px;
+  height: 23px;
+}
+
+.brands-strip img[src$="danone.svg"] {
+  width: 79px;
+  height: 35px;
+}
+
+.brands-strip img[src$="arno.svg"] {
+  width: 84px;
+  height: 20px;
+}
+
+.brands-strip img[src$="ache.svg"] {
+  width: 94px;
+  height: 20px;
+}
+
+.brands-strip img[src$="solistica.svg"] {
+  width: 80px;
+  height: 55px;
+}
+
+.brands-strip img[src$="ceratti.svg"] {
+  width: 81px;
+  height: 40px;
+}
+
+.brands-strip img[src$="yoki.svg"] {
+  width: 81px;
+  height: 35px;
+}
+
+.brands-strip img[src$="luft.svg"] {
+  width: 100px;
+  height: 30px;
 }
 
 .final-cta {
@@ -1582,6 +1647,15 @@ button {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+
+  .brands-track {
+    animation: none !important;
+  }
+
+  .brands:hover .brands-track,
+  .brands .brands-track {
+    animation: brands-marquee var(--brands-duration, 30s) linear infinite !important;
   }
 }
 
@@ -2152,38 +2226,6 @@ button {
     top: auto;
   }
 
-  .brands-strip {
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    min-width: 0;
-    height: auto;
-    padding-top: 0;
-    gap: 22px 28px;
-    opacity: 0.7;
-  }
-
-  .brands-track {
-    width: 100%;
-  }
-
-  .brands-strip img {
-    height: 30px;
-    max-width: 120px;
-  }
-
-  .brands-strip img[src$="arno.svg"],
-  .brands-strip img[src$="ache.svg"] {
-    height: 20px;
-  }
-
-  /* Keep loop repetition on desktop, but remove duplicated logos on mobile. */
-  .brands-strip img:nth-child(4),
-  .brands-strip img:nth-child(10),
-  .brands-strip img:nth-child(11) {
-    display: none;
-  }
-
   .contact-form {
     padding: 20px 14px 18px;
   }
@@ -2427,24 +2469,6 @@ button {
   .case-link {
     width: 100%;
     justify-content: flex-start;
-  }
-
-  .brands-strip {
-    gap: 18px 20px;
-  }
-
-  .brands-strip img {
-    height: 26px;
-    max-width: 108px;
-  }
-
-  .brands-strip img[src$="arno.svg"],
-  .brands-strip img[src$="ache.svg"] {
-    height: 18px;
-  }
-
-  .brands-strip img[src$="goodyear.svg"] {
-    height: 22px;
   }
 
   .final-cta-panel {

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 120" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="fadeRight" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="56" height="120" fill="url(#fadeRight)" />
+</svg>

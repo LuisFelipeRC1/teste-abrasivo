@@ -98,6 +98,9 @@ try {
       $response.StatusCode = 200
       $response.ContentType = $contentType
       $response.ContentLength64 = $bytes.Length
+      $response.Headers["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
+      $response.Headers["Pragma"] = "no-cache"
+      $response.Headers["Expires"] = "0"
 
       if ($context.Request.HttpMethod -ne "HEAD") {
         $response.OutputStream.Write($bytes, 0, $bytes.Length)

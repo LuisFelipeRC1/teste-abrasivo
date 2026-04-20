@@ -1,0 +1,15 @@
+{
+  "name": "easy-doc-landing-page",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Landing page institucional da Easy Doc com auditoria Lighthouse e testes E2E.",
+  "scripts": {
+    "serve": "powershell -ExecutionPolicy Bypass -File ./serve.ps1 -Port 4173",
+    "test:e2e": "playwright test",
+    "audit:lighthouse": "node ./scripts/run-lighthouse.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "lighthouse": "^12.8.2"
+  }
+}
