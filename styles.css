@@ -19,6 +19,7 @@
   --radius-sm: 16px;
   --container-wide: min(1560px, calc(100vw - 48px));
   --container: min(1460px, calc(100vw - 48px));
+  --anchor-offset: 122px;
   --transition: 220ms ease;
 }
 
@@ -30,6 +31,28 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--anchor-offset);
+}
+
+:where(section[id], footer[id]) {
+  scroll-margin-top: var(--anchor-offset);
+}
+
+#inicio {
+  scroll-margin-top: calc(var(--anchor-offset) + 10px);
+}
+
+#tecnologia,
+#beneficios {
+  scroll-margin-top: calc(var(--anchor-offset) + 8px);
+}
+
+#case {
+  scroll-margin-top: calc(var(--anchor-offset) - 170px);
+}
+
+#contato {
+  scroll-margin-top: calc(var(--anchor-offset) - 110px);
 }
 
 body {
@@ -1866,6 +1889,7 @@ button {
   :root {
     --container-wide: min(100vw - 20px, 100vw - 20px);
     --container: min(100vw - 20px, 100vw - 20px);
+    --anchor-offset: 96px;
   }
 
   .site-header {
@@ -2190,6 +2214,10 @@ button {
 }
 
 @media (max-width: 560px) {
+  :root {
+    --anchor-offset: 90px;
+  }
+
   .shell,
   .header-shell,
   .mobile-menu {
