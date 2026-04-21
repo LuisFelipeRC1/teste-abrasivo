@@ -2274,7 +2274,14 @@ button {
   }
 
   .cloudflare-box {
+    align-self: flex-start;
+    min-height: 0;
     justify-content: flex-start;
+  }
+
+  .cloudflare-box img {
+    width: clamp(160px, 58vw, 195px);
+    transform: none;
   }
 }
 
