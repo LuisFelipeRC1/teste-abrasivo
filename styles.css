@@ -1403,7 +1403,7 @@ button {
 .final-cta {
   display: flex;
   justify-content: center;
-  padding: 40px 0 10px;
+  padding: 80px 0 26px;
 }
 
 .final-cta-panel {
@@ -1427,7 +1427,7 @@ button {
   gap: 12px;
   isolation: isolate;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .final-cta-copy {
@@ -1453,7 +1453,7 @@ button {
 
 .final-cta-visual {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   display: grid;
   place-items: end center;
   min-height: 260px;
@@ -1461,7 +1461,7 @@ button {
   isolation: isolate;
   align-self: end;
   margin-top: -84px;
-  margin-bottom: -49px;
+  margin-bottom: -60px;
 }
 
 .final-cta-visual::before,
@@ -1499,6 +1499,7 @@ button {
   width: min(228px, 100%);
   max-width: 100%;
   align-self: end;
+  transform: translateY(-60px);
 }
 
 .final-cta-image img {
@@ -1970,6 +1971,7 @@ button {
 
   .final-cta-image {
     width: min(248px, 100%);
+    transform: translateY(-60px);
   }
 
   .field-grid {
@@ -2537,6 +2539,7 @@ button {
 
   .final-cta-image {
     width: min(182px, 72%);
+    transform: translateY(0);
   }
 
   .site-footer {
