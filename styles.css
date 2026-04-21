@@ -2387,6 +2387,19 @@ button {
     width: 100%;
   }
 
+  .mini-cta {
+    padding-top: 24px;
+    padding-bottom: 56px;
+  }
+
+  .final-cta {
+    padding-bottom: 40px;
+  }
+
+  .contact-section {
+    padding-top: 14px;
+  }
+
   .problem-grid {
     gap: 18px;
   }
@@ -2426,7 +2439,7 @@ button {
   .mini-cta-robot {
     width: 100px;
     margin-top: 0;
-    margin-right: -4px;
+    margin-right: -8px;
     margin-bottom: -2px;
   }
 
@@ -2518,7 +2531,7 @@ button {
 
   .final-cta-visual {
     width: 100%;
-    min-height: 198px;
+    min-height: 185px;
     padding-inline: 0;
     margin-top: 0;
     margin-bottom: 0;
@@ -2539,7 +2552,7 @@ button {
 
   .final-cta-image {
     width: min(182px, 72%);
-    transform: translateY(0);
+    transform: translateY(8px);
   }
 
   .site-footer {
