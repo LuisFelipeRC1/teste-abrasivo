@@ -11,6 +11,7 @@ const feedback = document.querySelector(".form-feedback");
 const phoneInput = document.querySelector('input[name="telefone"]');
 
 const mediaDesktop = window.matchMedia("(min-width: 921px)");
+let revealFrame = 0;
 
 const syncBodyScroll = () => {
   const menuOpen = header?.classList.contains("menu-open");
@@ -47,23 +48,6 @@ mobileMenuLinks.forEach((link) => {
 window.addEventListener("scroll", setHeaderState, { passive: true });
 setHeaderState();
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  {
-    threshold: 0.18,
-    rootMargin: "0px 0px -40px 0px",
-  }
-);
-
-revealItems.forEach((item) => revealObserver.observe(item));
-
 const revealVisibleNow = () => {
   revealItems.forEach((item) => {
     const rect = item.getBoundingClientRect();
@@ -73,9 +57,37 @@ const revealVisibleNow = () => {
   });
 };
 
-window.addEventListener("load", revealVisibleNow);
-window.addEventListener("resize", revealVisibleNow);
-revealVisibleNow();
+const scheduleRevealVisible = () => {
+  if (revealFrame) return;
+
+  revealFrame = window.requestAnimationFrame(() => {
+    revealFrame = 0;
+    revealVisibleNow();
+  });
+};
+
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.18,
+      rootMargin: "0px 0px -40px 0px",
+    }
+  );
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+}
+
+window.addEventListener("load", scheduleRevealVisible, { once: true });
+window.addEventListener("resize", scheduleRevealVisible);
+scheduleRevealVisible();
 
 const openVideo = (url) => {
   if (!videoModal || !videoFrame) return;
